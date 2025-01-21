@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roster Management</title>
+    <link rel="stylesheet" href="./create-roster.css">
+    <link rel="icon" href="../icons/30k-legion-badge.webp">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="content">
+            <div class="roster-name">
+                <div class="header">
+                    <h1 class="title">Your Roster</h1>
+                    <button class="tc" onclick="changeTheme()">☽</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="type">
+                <h2>Epic Hero</h2>
+            </div>
+            <ul>
+                <li>
+                    <p>Angron Daemon Primarch of Khorne</p>
+                    <button class="add" id="AngronPlus">+</button>
+                    <button class="view-details" onclick="openModal('Angron', 'Details about Angron...')">👁️</button>
+                </li>
+                <li>
+                    <p>Kharn the Betrayer</p>
+                    <button id="KharnPlus">+</button>
+                    <button class="view-details" onclick="openModal('Kharn', 'Details about Kharn...')">👁️</button>
+                </li>
+                <li>
+                    <p>Lord Invocatus</p>
+                    <button id="InvocatusPlus">+</button>
+                    <button class="view-details" onclick="openModal('Invocatus', 'Details about Lord Invocatus...')">👁️</button>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="type">
+                <h2>Character</h2>
+            </div>
+            <ul>
+                <li>
+                    <p>World Eaters Daemon Prince</p>
+                    <button id="CharacterDaemonPrince">+</button>
+                    <button class="view-details" onclick="openModal('Daemon Prince', 'Details about Daemon Prince...')">👁️</button>
+                </li>
+                <li>
+                    <p>World Eaters Daemon Prince with Wings</p>
+                    <button id="CharacterDaemonPrinceWings">+</button>
+                    <button class="view-details" onclick="openModal('Daemon Prince with Wings', 'Details about Daemon Prince with Wings...')">👁️</button>
+                </li>
+                <li>
+                    <p>World Eaters Lord on Juggernaut</p>
+                    <button id="CharacterLordOnJuggernaut">+</button>
+                    <button class="view-details" onclick="openModal('Lord on Juggernaut', 'Details about Lord on Juggernaut...')">👁️</button>
+                </li>
+                <li>
+                    <p>World Eaters Master of Executions</p>
+                    <button id="CharacterMasterOfExecutions">+</button>
+                    <button class="view-details" onclick="openModal('Master of Executions', 'Details about Master of Executions...')">👁️</button>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="type">
+                <h2>Battleline</h2>
+            </div>
+            <ul>
+                <li>
+                    <p>Khorne Berserkers</p>
+                    <button id="KhorneBerserkers">+</button>
+                    <button class="view-details" onclick="openModal('Khorne Berserkers', 'Details about Khorne Berserkers...')">👁️</button>
+                </li>
+                <li>
+                    <p>Jakhals</p>
+                    <button id="Jakhals">+</button>
+                    <button class="view-details" onclick="openModal('Jakhals', 'Details about Jakhals...')">👁️</button>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="type">
+                <h2>Infantry</h2>
+            </div>
+            <ul>
+                <li>
+                    <p>Eightbound</p>
+                    <button id="Eightbound">+</button>
+                    <button class="view-details" onclick="openModal('Eightbound', 'Details about Eightbound...')">👁️</button>
+                </li>
+                <li>
+                    <p>Exalted Eightbound</p>
+                    <button id="ExaltedEightbound">+</button>
+                    <button class="view-details" onclick="openModal('Exalted Eightbound', 'Details about Exalted Eightbound...')">👁️</button>
+                </li>
+                <li>
+                    <p>World Eaters Terminator Squad</p>
+                    <button id="TerminatorSquad">+</button>
+                    <button class="view-details" onclick="openModal('Terminator Squad', 'Details about Terminator Squad...')">👁️</button>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="type">
+                <h2>Beast</h2>
+            </div>
+            <ul>
+                <li>
+                    <p>Chaos Spawn</p>
+                    <button id="ChaosSpawn">+</button>
+                    <button class="view-details" onclick="openModal('Chaos Spawn', 'Details about Chaos Spawn...')">👁️</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainContent">
+        <div class="contentTitle">
+            <h1>Roster</h1>
+            <h2>Chaos - World Eaters</h2>
+        </div>
+        <div class="result-container">
+            <h2>Epic Heroes</h2>
+            <div id="epicHero"></div>
+
+            <h2>Characters</h2>
+            <div id="character"></div>
+
+            <h2>Battleline</h2>
+            <div id="battleLine"></div>
+
+            <h2>Infantry</h2>
+            <div id="infantry"></div>
+
+            <h2>Beasts</h2>
+            <div id="beast"></div>
+
+            <h2>Total Points: <span id="totalPoints">0</span></h2>
+        </div>
+    </div>
+    <div id="unitModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 id="unitTitle">Unit Title</h2>
+            <p id="unitDetails">Details about the unit will go here.</p>
+        </div>
+    </div>
+    <script src="create-roster.js"></script>
+</body>
+</html>
