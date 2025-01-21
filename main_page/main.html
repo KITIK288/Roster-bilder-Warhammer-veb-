@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="../icons/30k-legion-badge.webp">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>My roster</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../main_page/main.html">Home page</a></li>
+                    <li><a href="../create-roster-page/create-roster.html">Build roster</a></li>
+                    <li><a href="../about-page/about.html">About site</a></li>
+                    <li><a href="../feedback_page/feedback.html">Send feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="title">
+        <h1></h1>
+    </div>
+    <div class="main-content">
+        <button class="start-roster" id="openModalBtn">Build roster</button>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content" id="myModalContent">
+            <span class="close">&times;</span>
+            <button class="theme-change" onclick="themeChange()">☽</button>
+            <div class="modal-title">
+                <h1>Build roster</h1>
+            </div>
+            <h1>Fraction</h1>
+            <h2>World Eaters</h2>
+            <h1>Points format</h1>
+            <input type="number" min="1" placeholder="points" id="pointsLimit">
+            <h1>Roster name</h1>
+            <input type="text" placeholder="roster name" id="rosterName">
+            <div class="start-button">
+                <a href="../create-roster-page/create-roster.html">
+                    <button class="start-roster" id="start-roster">Let's go</button>
+                </a>
+            </div>
+            <div class="modal-image">
+                <img src="../img/drh6rq6got8a1.png" alt="" id="img">
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
