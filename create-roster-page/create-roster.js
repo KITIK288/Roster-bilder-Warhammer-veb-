@@ -163,7 +163,7 @@ function changeTheme() {
     const sidebar2 = document.getElementById('sidebar2');
     const sidebar3 = document.getElementById('sidebar3');
     const sidebar4 = document.getElementById('sidebar4');
-    if (check % 2 !== 0) {
+    if (check % 2 === 0) {
         body.style.backgroundColor = "black";
         main.style.backgroundColor = 'black';
         Array.from(body.getElementsByTagName('h1')).forEach((h1) => {
@@ -203,4 +203,16 @@ function changeTheme() {
         titleName.style.backgroundColor = 'white';
     }
     check++;
+}
+
+function pointsLimit() {
+    const pointsLimit = document.getElementById('pointsLimit').value;
+    console.log(pointsLimit);
+    document.getElementById('Limit').innerText = `/${pointsLimit}`;
+}
+
+function rosterName() {
+    const name = document.getElementById('name').value;
+    console.log(name);
+    document.getElementById('rosterName').innerText = name;
 }
