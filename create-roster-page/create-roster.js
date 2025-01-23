@@ -23,8 +23,21 @@ let roster = {
 };
 
 let epicHeroCounter = -1;
-
 let totalCost = 0;
+
+function loadRoster() {
+    const savedRoster = JSON.parse(localStorage.getItem('roster'));
+    if (savedRoster) {
+        roster = savedRoster;
+        epicHeroCounter = roster.epicHero.length > 0 ? 0 : -1;
+        recalculateTotalCost();
+        updateRosterDisplay();
+    }
+}
+
+function saveRoster() {
+    localStorage.setItem('roster', JSON.stringify(roster));
+}
 
 function recalculateTotalCost() {
     const usedCost =
@@ -40,7 +53,7 @@ function recalculateTotalCost() {
 function addUnit(unit) {
     if (unit.type === "Epic Hero") {
         if (epicHeroCounter > -1) {
-            alert("Epic Hero already added!")
+            alert("Epic Hero already added!");
             return;
         }
         roster.epicHero.push(unit);
@@ -63,6 +76,7 @@ function addUnit(unit) {
     }
 
     recalculateTotalCost();
+    saveRoster();
     updateRosterDisplay();
 }
 
@@ -78,7 +92,7 @@ function removeUnit(unit) {
             "Beast": "beast"
         };
 
-        const typeKey = typeKeyMap[unit.type]; // Получаем правильный ключ типа
+        const typeKey = typeKeyMap[unit.type];
         if (typeKey) {
             roster[typeKey] = roster[typeKey].filter(u => u.name !== unit.name);
         } else {
@@ -87,6 +101,7 @@ function removeUnit(unit) {
     }
 
     recalculateTotalCost();
+    saveRoster();
     updateRosterDisplay();
 }
 
@@ -133,7 +148,8 @@ document.querySelectorAll('.content ul').forEach(ul => {
     });
 });
 
-updateRosterDisplay();
+// Загрузка данных из локального хранилища при инициализации
+loadRoster();
 
 function openModal(title, details) {
     document.getElementById('unitTitle').innerText = title;
@@ -209,10 +225,28 @@ function pointsLimit() {
     const pointsLimit = document.getElementById('pointsLimit').value;
     console.log(pointsLimit);
     document.getElementById('Limit').innerText = `/${pointsLimit}`;
+    localStorage.setItem('pointsLimit', pointsLimit);
 }
 
 function rosterName() {
     const name = document.getElementById('name').value;
     console.log(name);
     document.getElementById('rosterName').innerText = name;
+    localStorage.setItem('rosterName', name);
 }
+
+function loadAdditionalData() {
+    const savedPointsLimit = localStorage.getItem('pointsLimit');
+    if (savedPointsLimit) {
+        document.getElementById('pointsLimit').value = savedPointsLimit;
+        document.getElementById('Limit').innerText = `/${savedPointsLimit}`;
+    }
+
+    const savedRosterName = localStorage.getItem('rosterName');
+    if (savedRosterName) {
+        document.getElementById('name').value = savedRosterName;
+        document.getElementById('rosterName').innerText = savedRosterName;
+    }
+}
+
+loadAdditionalData();
