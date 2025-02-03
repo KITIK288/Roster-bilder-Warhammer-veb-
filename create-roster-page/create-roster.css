@@ -3,7 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #eaeaea;
+    background-color: #fefefe;
 }
 
 .sidebar {
@@ -36,7 +36,7 @@ li {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
-    justify-content: space-between; /* Обеспечивает равномерное распределение элементов */
+    justify-content: space-between;
 }
 
 li:hover {
@@ -56,7 +56,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 10px; /* Уменьшаем расстояние между кнопками */
+    margin-left: 10px;
 }
 
 button:hover {
@@ -114,15 +114,21 @@ button:hover {
 
 }
 
+.name {
+    margin-top: 20px;
+}
+
 .result-container {
     margin-left: 250px;
     width: 500px;
-    height: 650px;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    border: 1px solid #888;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: auto;
+    max-height: 2000px;
+    margin-top: 20px;
 }
 
 .header {
@@ -139,4 +145,15 @@ button:hover {
 .contentTitle {
     text-align: center;
     margin-left: 250px;
+}
+
+.con {
+    margin-left: 40px;
+}
+
+.titleName {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
 }
