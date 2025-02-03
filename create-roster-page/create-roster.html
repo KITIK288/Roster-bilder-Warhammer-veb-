@@ -8,37 +8,37 @@
 </head>
 <body>
     <div class="sidebar">
-        <div class="content">
-            <div class="roster-name">
+        <div class="content" id="main">
+            <div class="roster-name" id="titleName">
                 <div class="header">
                     <h1 class="title">Your Roster</h1>
                     <button class="tc" onclick="changeTheme()">☽</button>
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content" id="sidebar">
             <div class="type">
-                <h2>Epic Hero</h2>
+                <h2 class="epicHeroText">Epic Hero</h2>
             </div>
             <ul>
                 <li>
                     <p>Angron Daemon Primarch of Khorne</p>
                     <button class="add" id="AngronPlus">+</button>
-                    <button class="view-details" onclick="openModal('Angron', 'Details about Angron...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Angron', 'Details about Angron...', '/unitImage/Angron.png')">👁️</button>
                 </li>
                 <li>
                     <p>Kharn the Betrayer</p>
                     <button id="KharnPlus">+</button>
-                    <button class="view-details" onclick="openModal('Kharn', 'Details about Kharn...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Kharn', 'Details about Kharn...', '/unitImage/Kharn.png')">👁️</button>
                 </li>
                 <li>
                     <p>Lord Invocatus</p>
                     <button id="InvocatusPlus">+</button>
-                    <button class="view-details" onclick="openModal('Invocatus', 'Details about Lord Invocatus...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Invocatus', 'Details about Lord Invocatus...', '/unitImage/Invocatus.png')">👁️</button>
                 </li>
             </ul>
         </div>
-        <div class="content">
+        <div class="content" id="sidebar1">
             <div class="type">
                 <h2>Character</h2>
             </div>
@@ -46,26 +46,26 @@
                 <li>
                     <p>World Eaters Daemon Prince</p>
                     <button id="CharacterDaemonPrince">+</button>
-                    <button class="view-details" onclick="openModal('Daemon Prince', 'Details about Daemon Prince...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Daemon Prince', 'Details about Daemon Prince...', '/unitImage/dpw.png')">👁️</button>
                 </li>
                 <li>
                     <p>World Eaters Daemon Prince with Wings</p>
                     <button id="CharacterDaemonPrinceWings">+</button>
-                    <button class="view-details" onclick="openModal('Daemon Prince with Wings', 'Details about Daemon Prince with Wings...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Daemon Prince with Wings', 'Details about Daemon Prince with Wings...', '/unitImage/dpwings.png')">👁️</button>
                 </li>
                 <li>
                     <p>World Eaters Lord on Juggernaut</p>
                     <button id="CharacterLordOnJuggernaut">+</button>
-                    <button class="view-details" onclick="openModal('Lord on Juggernaut', 'Details about Lord on Juggernaut...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Lord on Juggernaut', 'Details about Lord on Juggernaut...', '/unitImage/jaga.png')">👁️</button>
                 </li>
                 <li>
                     <p>World Eaters Master of Executions</p>
                     <button id="CharacterMasterOfExecutions">+</button>
-                    <button class="view-details" onclick="openModal('Master of Executions', 'Details about Master of Executions...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Master of Executions', 'Details about Master of Executions...', '/unitImage/exe.png')">👁️</button>
                 </li>
             </ul>
         </div>
-        <div class="content">
+        <div class="content" id="sidebar2">
             <div class="type">
                 <h2>Battleline</h2>
             </div>
@@ -73,16 +73,16 @@
                 <li>
                     <p>Khorne Berserkers</p>
                     <button id="KhorneBerserkers">+</button>
-                    <button class="view-details" onclick="openModal('Khorne Berserkers', 'Details about Khorne Berserkers...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Khorne Berserkers', 'Details about Khorne Berserkers...', '/unitImage/jac.png')">👁️</button>
                 </li>
                 <li>
                     <p>Jakhals</p>
                     <button id="Jakhals">+</button>
-                    <button class="view-details" onclick="openModal('Jakhals', 'Details about Jakhals...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Jakhals', 'Details about Jakhals...', '/unitImage/bers.png')">👁️</button>
                 </li>
             </ul>
         </div>
-        <div class="content">
+        <div class="content" id="sidebar3">
             <div class="type">
                 <h2>Infantry</h2>
             </div>
@@ -90,21 +90,21 @@
                 <li>
                     <p>Eightbound</p>
                     <button id="Eightbound">+</button>
-                    <button class="view-details" onclick="openModal('Eightbound', 'Details about Eightbound...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Eightbound', 'Details about Eightbound...', '/unitImage/eig.png')">👁️</button>
                 </li>
                 <li>
                     <p>Exalted Eightbound</p>
                     <button id="ExaltedEightbound">+</button>
-                    <button class="view-details" onclick="openModal('Exalted Eightbound', 'Details about Exalted Eightbound...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Exalted Eightbound', 'Details about Exalted Eightbound...', '/unitImage/ex.png')">👁️</button>
                 </li>
                 <li>
                     <p>World Eaters Terminator Squad</p>
                     <button id="TerminatorSquad">+</button>
-                    <button class="view-details" onclick="openModal('Terminator Squad', 'Details about Terminator Squad...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Terminator Squad', 'Details about Terminator Squad...', '/unitImage/term.png')">👁️</button>
                 </li>
             </ul>
         </div>
-        <div class="content">
+        <div class="content" id="sidebar4">
             <div class="type">
                 <h2>Beast</h2>
             </div>
@@ -112,7 +112,7 @@
                 <li>
                     <p>Chaos Spawn</p>
                     <button id="ChaosSpawn">+</button>
-                    <button class="view-details" onclick="openModal('Chaos Spawn', 'Details about Chaos Spawn...')">👁️</button>
+                    <button class="view-details" onclick="openModal('Chaos Spawn', 'Details about Chaos Spawn...', '/unitImage/hs.png')">👁️</button>
                 </li>
             </ul>
         </div>
@@ -122,31 +122,44 @@
         <div class="contentTitle">
             <h1>Roster</h1>
             <h2>Chaos - World Eaters</h2>
+            <input type="number" placeholder="Enter points limit" id="pointsLimit">
+            <button onclick="pointsLimit()" class="agree">✔</button>
+            <p></p>
+            <div class="name">
+                <input type="text" placeholder="Enter roster name" id="name">
+                <button onclick="rosterName()" class="agree">✔</button>
+            </div>
         </div>
         <div class="result-container">
-            <h2>Epic Heroes</h2>
-            <div id="epicHero"></div>
+            <div class="con" id="resultContainer">
+                <div class="titleName">
+                    <span id="rosterName"></span>
+                </div>
+                <h2>Epic Heroes</h2>
+                <div id="epicHero"></div>
 
-            <h2>Characters</h2>
-            <div id="character"></div>
+                <h2>Characters</h2>
+                <div id="character"></div>
 
-            <h2>Battleline</h2>
-            <div id="battleLine"></div>
+                <h2>Battleline</h2>
+                <div id="battleLine"></div>
 
-            <h2>Infantry</h2>
-            <div id="infantry"></div>
+                <h2>Infantry</h2>
+                <div id="infantry"></div>
 
-            <h2>Beasts</h2>
-            <div id="beast"></div>
+                <h2>Beasts</h2>
+                <div id="beast"></div>
 
-            <h2>Total Points: <span id="totalPoints">0</span></h2>
+                <h2>Total Points: <span id="totalPoints">0</span><span id="Limit" onclick="pointsLimit()"></span></h2>
+            </div>
         </div>
     </div>
     <div id="unitModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <h2 id="unitTitle">Unit Title</h2>
-            <p id="unitDetails">Details about the unit will go here.</p>
+            <h2 id="unitTitle"></h2>
+            <img id="unitImage" src="" alt="Unit Image" style="width: 100%; height: auto; margin-bottom: 20px;">
+            <p id="unitDetails"></p>
         </div>
     </div>
     <script src="create-roster.js"></script>
